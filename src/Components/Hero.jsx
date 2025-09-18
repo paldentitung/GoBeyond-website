@@ -6,7 +6,10 @@ import { BsCursor } from "react-icons/bs";
 const Hero = () => {
   return (
     <>
-      <div className="lg:h-[80vh] w-full relative group  ">
+      <div
+        className=" h-[600px]
+      lg:h-[80vh] w-full relative group  "
+      >
         <div className="h-full w-full">
           <img
             src={hero__image}
@@ -16,14 +19,17 @@ const Hero = () => {
         </div>
         {/* overlay */}
         <div
-          className=" absolute  bg-sky-900/50 text-white flex justify-center items-center flex-col  opacity-0    inset-0 transition-all duration-300 
-        group-hover:opacity-100 group-hover:cursor-pointer"
+          className="
+    absolute inset-0 bg-sky-900/50 text-white flex justify-center items-center flex-col
+    opacity-100 lg:opacity-0 lg:group-hover:opacity-100
+    transition-all duration-300
+  "
         >
           <div className="flex justify-center items-center flex-col space-y-4">
-            <div className="text-2xl md:text-3xl lg:text-5xl">
+            <div className="text-[18px] md:text-3xl lg:text-5xl">
               Discover Your Next Adventure
             </div>
-            <div>
+            <div className="text-[14px] text-2xl text-center">
               Explore breathtaking destinations, create unforgettable memories,
               and travel beyond the ordinary
             </div>

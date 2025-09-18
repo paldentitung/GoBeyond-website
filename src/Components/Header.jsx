@@ -8,7 +8,10 @@ const Header = () => {
   return (
     <header className=" flex justify-around items-center p-6 flex-col md:flex-row top-0 z-50 sticky bg-white">
       <div className="flex gap-8 items-center">
-        <Title title="GoBeyond" />
+        <Link to="/">
+          {" "}
+          <Title title="GoBeyond" />
+        </Link>
         <div className="block md:hidden">
           <FaBars
             className="text-[20px]"
@@ -34,7 +37,7 @@ const Header = () => {
       </nav>
 
       {showMenu && (
-        <nav className=" md:hidden  min-h-screen w-3/4  absolute   right-0 bottom-0 z-50 bg-white  flex flex-col gap-5  items-center p-[5%]  ">
+        <nav className=" md:hidden  min-h-screen w-3/4  fixed right-0 bottom-0 z-50 bg-white  flex flex-col gap-5  items-center p-[5%]  ">
           <ul className="flex gap-3 flex-col  w-full">
             <li className="border-b border-transparent p-2  transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
               <Link to="/">Home</Link>
