@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "../Components/Header";
-import Hero from "../Components/Hero";
 import Destinations from "../Components/Destination";
-const Home = () => {
+const DestinationsPage = () => {
   return (
     <>
-      <Hero />
       <Destinations />
     </>
   );
 };
 
-export default Home;
+export default DestinationsPage;

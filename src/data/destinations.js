@@ -1,0 +1,51 @@
+const data = [
+  {
+    image: "../src/assets/paris.jpg",
+    name: "Paris, France",
+    description: "City of lights, love, and timeless landmarks.",
+    price: "$799",
+    rating: 50,
+    category: "City",
+  },
+  {
+    image: "../src/assets/tokyo.jpg",
+    name: "Tokyo, Japan",
+    description: "A blend of tradition and futuristic vibes.",
+    price: "$899",
+    rating: 40,
+    category: "City",
+  },
+  {
+    image: "../src/assets/maldives.jpg",
+    name: "Maldives",
+    description: "Tropical paradise with turquoise waters.",
+    price: "$999",
+    rating: 45,
+    category: "Beach",
+  },
+  {
+    image: "../src/assets/pokhara.jpg",
+    name: "Pokhara, Nepal",
+    description: "Adventure hub surrounded by the Himalayas.",
+    price: "$499",
+    rating: 45,
+    category: "Mountain",
+  },
+  {
+    image: "../src/assets/rome.jpg",
+    name: "Rome, Italy",
+    description: "Historic ruins and cultural treasures.",
+    price: "$699",
+    rating: 45,
+    category: "Historical",
+  },
+  {
+    image: "../src/assets/newyork.jpg",
+    name: "New York, USA",
+    description: "The city that never sleeps.",
+    price: "$850",
+    rating: 50,
+    category: "City",
+  },
+];
+export default data;
