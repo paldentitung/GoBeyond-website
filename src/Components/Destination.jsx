@@ -2,7 +2,11 @@ import React from "react";
 import Card from "../Components/Card";
 import data from "../data/destinations";
 import Title from "./Title";
-const Destinations = () => {
+import MainButton from "./MainButton";
+import { Link } from "react-router-dom";
+
+const Destinations = ({ showAll = false }) => {
+  const displayedData = showAll ? data : data.slice(0, 8);
   return (
     <>
       <div className="mt-10">
@@ -11,10 +15,20 @@ const Destinations = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-[10%] py-[5%] min-h-screen">
-          {data.map((destination, index) => (
-            <Card destination={destination} key={index} />
+          {displayedData.map((destination, index) => (
+            <div>
+              <Card destination={destination} key={index} />
+            </div>
           ))}
         </div>
+
+        {!showAll && (
+          <div className="flex justify-center items-center">
+            <Link to="/destinations">
+              <MainButton name="Read More" />
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );

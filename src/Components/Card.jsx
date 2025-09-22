@@ -12,26 +12,26 @@ const ratingImages = {
 };
 
 const Card = ({ destination }) => {
-  const { image, name, description, price, rating, category } = destination;
+  const { id, image, name, description, price, rating, category } = destination;
   return (
     <>
-      <div className="  rounded-md overflow-hidden shadow-lg shadow-[rgb(230,230,230)] flex flex-col  transition-all duration-200 hover:cursor-pointer  hover:shadow-[rgb(220,220,220)]">
-        <div className="h-1/2 w-full overflow-hidden">
+      <div className="h-[500px] rounded-md overflow-hidden shadow-lg shadow-[rgb(230,230,230)] flex flex-col transition-all duration-200 hover:cursor-pointer hover:shadow-[rgb(220,220,220)]">
+        <div className="h-1/2 w-full overflow-hidden flex-shrink-0">
           <img
             src={image}
             alt=""
-            className="h-full  w-full object-cover transition-all duration-300 hover:scale-110 "
+            className="h-full w-full object-cover transition-all duration-300 hover:scale-110"
           />
         </div>
-        <div className="flex flex-col space-y-3 p-4">
-          <div className="flex  justify-between">
+        <div className="flex flex-col space-y-3 p-4  h-1/2">
+          <div className="flex justify-between">
             <h1 className="font-bold">{name}</h1>
             <FaMapMarkedAlt />
           </div>
-          <p className="text-gray-700">{description}</p>
+          <p className="text-gray-700 line-clamp-3">{description}</p>
           <div className="flex justify-between items-center">
             <span>{price}</span>
-            <span className="">
+            <span>
               <img
                 src={ratingImages[rating]}
                 alt={`Rating: ${rating}`}
@@ -40,7 +40,10 @@ const Card = ({ destination }) => {
             </span>
           </div>
           <span className="flex-1">{category}</span>
-          <Link className="flex items-center gap-4 text-blue-400">
+          <Link
+            to={`/destination/${id}`}
+            className="flex items-center gap-4 text-blue-400"
+          >
             <span>Read more</span>
             <FaArrowRight className="text-[14px]" />
           </Link>

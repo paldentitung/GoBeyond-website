@@ -1,7 +1,8 @@
 import React from "react";
-
+import { useParams } from "react-router-dom";
 const DestinationDetail = () => {
-  return <div>DestinationDetail</div>;
+  const { id } = useParams();
+  return <div>DestinationDetail{id}</div>;
 };
 
 export default DestinationDetail;

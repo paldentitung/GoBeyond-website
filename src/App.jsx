@@ -3,9 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import DestinationsPage from "./Pages/DestinationsPage";
 import DestinationDetail from "./Pages/DestinationDetail";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
+import AboutUsPage from "./Pages/AboutUsPage";
+import ContactPage from "./Pages/ContactPage";
 import Header from "./Components/Header";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App = () => {
   return (
@@ -15,8 +16,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destinations" element={<DestinationsPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/destination/:id" element={<DestinationDetail />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </>

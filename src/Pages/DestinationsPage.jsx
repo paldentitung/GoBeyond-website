@@ -3,7 +3,7 @@ import Destinations from "../Components/Destination";
 const DestinationsPage = () => {
   return (
     <>
-      <Destinations />
+      <Destinations showAll={true} />
     </>
   );
 };
