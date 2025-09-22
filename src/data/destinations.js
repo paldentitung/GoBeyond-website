@@ -1,6 +1,13 @@
+import paris from "../assets/paris.jpg";
+import tokyo from "../assets/tokyo.jpg";
+import maldives from "../assets/maldives.jpg";
+import pokhara from "../assets/pokhara.jpg";
+import rome from "../assets/rome.jpg";
+import newyork from "../assets/newyork.jpg";
+
 const data = [
   {
-    image: "../src/assets/paris.jpg",
+    image: paris,
     name: "Paris, France",
     description: "City of lights, love, and timeless landmarks.",
     price: "$799",
@@ -8,7 +15,7 @@ const data = [
     category: "City",
   },
   {
-    image: "../src/assets/tokyo.jpg",
+    image: tokyo,
     name: "Tokyo, Japan",
     description: "A blend of tradition and futuristic vibes.",
     price: "$899",
@@ -16,7 +23,7 @@ const data = [
     category: "City",
   },
   {
-    image: "../src/assets/maldives.jpg",
+    image: maldives,
     name: "Maldives",
     description: "Tropical paradise with turquoise waters.",
     price: "$999",
@@ -24,7 +31,7 @@ const data = [
     category: "Beach",
   },
   {
-    image: "../src/assets/pokhara.jpg",
+    image: pokhara,
     name: "Pokhara, Nepal",
     description: "Adventure hub surrounded by the Himalayas.",
     price: "$499",
@@ -32,7 +39,7 @@ const data = [
     category: "Mountain",
   },
   {
-    image: "../src/assets/rome.jpg",
+    image: rome,
     name: "Rome, Italy",
     description: "Historic ruins and cultural treasures.",
     price: "$699",
@@ -40,7 +47,7 @@ const data = [
     category: "Historical",
   },
   {
-    image: "../src/assets/newyork.jpg",
+    image: newyork,
     name: "New York, USA",
     description: "The city that never sleeps.",
     price: "$850",
@@ -48,4 +55,5 @@ const data = [
     category: "City",
   },
 ];
+
 export default data;
