@@ -1,13 +1,9 @@
-import React from "react";
-import Title from "../Components/Title";
 import MainButton from "../Components/MainButton";
 import pagenotfound404 from "../assets/404Page.png";
 import { useNavigate } from "react-router-dom";
 const PageNotFound = () => {
   const nav = useNavigate();
-  const handlenav = () => {
-    nav("/");
-  };
+
   return (
     <>
       <div className="flex justify-center items-center flex-col space-y-4 mt-10">
@@ -18,7 +14,7 @@ const PageNotFound = () => {
           adventure.
         </p>
 
-        <MainButton name="Go Home" onClick={handlenav} />
+        <MainButton name="Go Back" onClick={() => nav(-1)} />
       </div>
     </>
   );
