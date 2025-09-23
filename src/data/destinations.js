@@ -16,23 +16,23 @@ import kyoto from "../assets/kyoto.jpg";
 import beijing from "../assets/beijing.jpg";
 import shanghai from "../assets/shanghai.jpg";
 
-// Detail images
-import parisDetail from "../assets/detail/parisDetail.webp";
-import tokyoDetail from "../assets/detail/tokyoDetail.webp";
-import maldivesDetail from "../assets/detail/maldivesDetail.webp";
-import pokharaDetail from "../assets/detail/pokharaDetail.webp";
-import romeDetail from "../assets/detail/romeDetail.webp";
-import newyorkDetail from "../assets/detail/newyorkDetail.webp";
-import baliDetail from "../assets/detail/baliDetail.webp";
-import sydneyDetail from "../assets/detail/sydneyDetail.webp";
-import londonDetail from "../assets/detail/londonDetail.webp";
-import santoriniDetail from "../assets/detail/santoriniDetail.webp";
-import dubaiDetail from "../assets/detail/dubaiDetail.webp";
-import rioDetail from "../assets/detail/rioDetail.webp";
-import seoulDetail from "../assets/detail/seoulDetail.webp";
-import kyotoDetail from "../assets/detail/kyotoDetail.webp";
-import beijingDetail from "../assets/detail/beijingDetail.webp";
-import shanghaiDetail from "../assets/detail/shanghaiDetail.webp";
+// Detail images (compressed)
+import parisDetail from "../assets/detail/compressed/parisDetail.webp";
+import tokyoDetail from "../assets/detail/compressed/tokyoDetail.webp";
+import maldivesDetail from "../assets/detail/compressed/maldivesDetail.webp";
+import pokharaDetail from "../assets/detail/compressed/pokharaDetail.webp";
+import romeDetail from "../assets/detail/compressed/romeDetail.webp";
+import newyorkDetail from "../assets/detail/compressed/newyorkDetail.webp";
+import baliDetail from "../assets/detail/compressed/baliDetail.webp";
+import sydneyDetail from "../assets/detail/compressed/sydneyDetail.webp";
+import londonDetail from "../assets/detail/compressed/londonDetail.webp";
+import santoriniDetail from "../assets/detail/compressed/santoriniDetail.webp";
+import dubaiDetail from "../assets/detail/compressed/dubaiDetail.webp";
+import rioDetail from "../assets/detail/compressed/rioDetail.webp";
+import seoulDetail from "../assets/detail/compressed/seoulDetail.webp";
+import kyotoDetail from "../assets/detail/compressed/kyotoDetail.webp";
+import beijingDetail from "../assets/detail/compressed/beijingDetail.webp";
+import shanghaiDetail from "../assets/detail/compressed/shanghaiDetail.webp";
 
 const data = [
   {
