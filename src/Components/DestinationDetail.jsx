@@ -53,6 +53,7 @@ const DestinationDetail = ({ id }) => {
             src={detailImage}
             alt={name}
             className="w-full h-[300px] md:h-[600px] object-cover rounded-lg shadow-lg"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-sky-900/50 rounded-lg transition-opacity duration-500 lg:opacity-0 group-hover:opacity-100">
             <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 text-center">

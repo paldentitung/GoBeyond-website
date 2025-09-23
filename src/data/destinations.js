@@ -16,22 +16,23 @@ import kyoto from "../assets/kyoto.jpg";
 import beijing from "../assets/beijing.jpg";
 import shanghai from "../assets/shanghai.jpg";
 
-import parisDetail from "../assets/detail/parisDetail.jpg";
-import tokyoDetail from "../assets/detail/tokyoDetail.jpg";
-import maldivesDetail from "../assets/detail/maldivesDetai.jpg";
-import pokharaDetail from "../assets/detail/pokharaDetail.jpg";
-import romeDetail from "../assets/detail/romeDetail.jpg";
-import newyorkDetail from "../assets/detail/newyorkDetail.jpg";
-import baliDetail from "../assets/detail/baliDetail.jpg";
-import sydneyDetail from "../assets/detail/sydneyDetail.jpg";
-import londonDetail from "../assets/detail/londonDetail.jpg";
-import santoriniDetail from "../assets/detail/santoriniDetail.jpg";
-import dubaiDetail from "../assets/detail/dubaiDetail .jpg";
-import rioDetail from "../assets/detail/rioDetail.jpg";
-import seoulDetail from "../assets/detail/seoulDetail.jpg";
-import kyotoDetail from "../assets/detail/kyotoDetail.jpg";
-import beijingDetail from "../assets/detail/beijingDetail.jpg";
-import shanghaiDetail from "../assets/detail/shanghaiDetail.jpg";
+// Detail images
+import parisDetail from "../assets/detail/parisDetail.webp";
+import tokyoDetail from "../assets/detail/tokyoDetail.webp";
+import maldivesDetail from "../assets/detail/maldivesDetail.webp";
+import pokharaDetail from "../assets/detail/pokharaDetail.webp";
+import romeDetail from "../assets/detail/romeDetail.webp";
+import newyorkDetail from "../assets/detail/newyorkDetail.webp";
+import baliDetail from "../assets/detail/baliDetail.webp";
+import sydneyDetail from "../assets/detail/sydneyDetail.webp";
+import londonDetail from "../assets/detail/londonDetail.webp";
+import santoriniDetail from "../assets/detail/santoriniDetail.webp";
+import dubaiDetail from "../assets/detail/dubaiDetail.webp";
+import rioDetail from "../assets/detail/rioDetail.webp";
+import seoulDetail from "../assets/detail/seoulDetail.webp";
+import kyotoDetail from "../assets/detail/kyotoDetail.webp";
+import beijingDetail from "../assets/detail/beijingDetail.webp";
+import shanghaiDetail from "../assets/detail/shanghaiDetail.webp";
 
 const data = [
   {
