@@ -22,16 +22,24 @@ const Header = () => {
       <nav className="hidden md:block">
         <ul className="flex gap-6">
           <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/">Home</Link>
+            <Link to="/" className="block w-full h-full">
+              Home
+            </Link>
           </li>
           <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/destinations">Destinations</Link>
+            <Link to="/destinations" className="block w-full h-full">
+              Destinations
+            </Link>
           </li>
           <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/about">About Us</Link>
+            <Link to="/about" className="block w-full h-full">
+              About Us
+            </Link>
           </li>
           <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" className="block w-full h-full">
+              Contact Us
+            </Link>
           </li>
         </ul>
       </nav>
