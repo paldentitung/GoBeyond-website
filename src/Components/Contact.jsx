@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="space-y-2 text-gray-700">
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-orange-500" />
-              <a className="hover:underline">gobeyound@gmail.com</a>
+              <a className="hover:underline">info@gobeyond.com</a>
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="text-green-500" />
