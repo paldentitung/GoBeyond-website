@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 
@@ -13,10 +13,28 @@ import TermsPage from "./Pages/TermsPage";
 import PrivacyPage from "./Pages/PrivacyPage";
 import PageNotFound from "./Pages/PageNotFound";
 import Header from "./Components/Header";
-
+import Title from "./Components/Title";
 const App = () => {
   const [showModal, setShowModal] = useState(false);
   const [mode, setMode] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  useEffect(() => {
+    const splashTimer = setTimeout(() => setShowSplash(false), 3000);
+    return () => clearTimeout(splashTimer);
+  }, []);
+
+  if (showSplash) {
+    return (
+      <div className="min-h-screen flex justify-center items-center flex-col">
+        <span>Welcome to </span>
+        <div className="flex gap-1 items-center">
+          <span className="bg-cyan-500 text-white p-2 rounded-[50%]">GB</span>
+          <Title title="GoBeyond" />
+        </div>
+        <div className="w-[50px] h-[50px] border-cyan-500 border-2 border-dotted rounded-[50%]  animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className={mode ? "bg-white" : "bg-gray-800 text-white"}>
