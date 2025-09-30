@@ -3,6 +3,7 @@ import Title from "./Title";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 const Header = ({ setMode, mode }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -25,78 +26,176 @@ const Header = ({ setMode, mode }) => {
       </div>
       <nav className="hidden md:block">
         <ul className="flex gap-6">
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/" className="block w-full h-full">
+          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `block w-full h-full ${
+                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
+                }`
+              }
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/destinations" className="block w-full h-full">
+          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+            <NavLink
+              to="/destinations"
+              className={({ isActive }) =>
+                `block w-full h-full ${
+                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
+                }`
+              }
+            >
               Destinations
-            </Link>
+            </NavLink>
           </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/about" className="block w-full h-full">
+          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `block w-full h-full ${
+                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
+                }`
+              }
+            >
               About Us
-            </Link>
+            </NavLink>
           </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-            <Link to="/contact" className="block w-full h-full">
+          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `block w-full h-full ${
+                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
+                }`
+              }
+            >
               Contact Us
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
 
-      <input
-        type="checkbox"
-        id="mode-toggle"
-        checked={mode}
-        onChange={() => setMode(!mode)}
-        className="hidden"
-      />
+      <div className="hidden md:block">
+        <input
+          type="checkbox"
+          id="mode-toggle"
+          checked={mode}
+          onChange={() => setMode(!mode)}
+          className="hidden"
+        />
 
-      <label
-        htmlFor="mode-toggle"
-        className="w-12 h-6 border rounded-2xl flex items-center cursor-pointer px-1"
-      >
-        <span
-          className={`w-4 h-4 rounded-full transition-all ${
-            mode ? "translate-x-6 bg-blue-600" : "translate-x-0 bg-gray-400"
-          }`}
-        ></span>
-      </label>
+        <label
+          htmlFor="mode-toggle"
+          className="w-12 h-6 border rounded-2xl flex items-center cursor-pointer px-1"
+        >
+          <span
+            className={`w-4 h-4 rounded-full transition-all ${
+              mode ? "translate-x-6 bg-blue-600" : "translate-x-0 bg-gray-400"
+            }`}
+          ></span>
+        </label>
+      </div>
 
       {showMenu && (
         <nav
-          className={`md:hidden  min-h-screen w-3/4  fixed right-0 top-0 z-50  flex flex-col gap-5  items-center p-[5%] ${
+          className={`md:hidden min-h-screen w-3/4 fixed right-0 top-0 z-50 flex flex-col gap-5 items-center p-[5%] ${
             mode ? "bg-white " : "bg-gray-800 text-white"
-          }  `}
+          }`}
         >
-          <ul className="flex gap-3 flex-col  w-full">
-            <li className="border-b block border-transparent p-2  transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-              <Link to="/" className="block">
+          <ul className="flex gap-3 flex-col w-full">
+            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
+              <NavLink
+                to="/"
+                onClick={() => setShowMenu(false)}
+                className={({ isActive }) =>
+                  `block w-full h-full ${
+                    isActive
+                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
+                      : "border-b border-transparent"
+                  }`
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
-            <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-              <Link to="/destinations" className="block">
+            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
+              <NavLink
+                to="/destinations"
+                onClick={() => setShowMenu(false)}
+                className={({ isActive }) =>
+                  `block w-full h-full ${
+                    isActive
+                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
+                      : "border-b border-transparent"
+                  }`
+                }
+              >
                 Destinations
-              </Link>
+              </NavLink>
             </li>
-            <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-              <Link to="/about" className="block">
+            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
+              <NavLink
+                to="/about"
+                onClick={() => setShowMenu(false)}
+                className={({ isActive }) =>
+                  `block w-full h-full ${
+                    isActive
+                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
+                      : "border-b border-transparent"
+                  }`
+                }
+              >
                 About Us
-              </Link>
+              </NavLink>
             </li>
-            <li className="border-b border-transparent p-2 transition-all duration-200 hover:border-b-blue-400 hover:text-blue-600">
-              <Link to="/contact" className="block">
+            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
+              <NavLink
+                to="/contact"
+                onClick={() => setShowMenu(false)}
+                className={({ isActive }) =>
+                  `block w-full h-full ${
+                    isActive
+                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
+                      : "border-b border-transparent"
+                  }`
+                }
+              >
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
+
+          {/* Toggle inside mobile menu */}
+          <div className="mt-6">
+            <input
+              type="checkbox"
+              id="mode-toggle-mobile"
+              checked={mode}
+              onChange={() => {
+                setMode(!mode);
+                setShowMenu(false);
+              }}
+              className="hidden"
+            />
+            <label
+              htmlFor="mode-toggle-mobile"
+              className="w-12 h-6 border rounded-2xl flex items-center cursor-pointer px-1"
+            >
+              <span
+                className={`w-4 h-4 rounded-full transition-all ${
+                  mode
+                    ? "translate-x-6 bg-blue-600"
+                    : "translate-x-0 bg-gray-400"
+                }`}
+              ></span>
+            </label>
+          </div>
+
+          {/* Close button */}
           <FaTimes
-            className="text-[20px]  absolute top-5 right-5"
+            className="text-[20px] absolute top-5 right-5"
             onClick={() => setShowMenu(!showMenu)}
           />
         </nav>

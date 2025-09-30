@@ -16,7 +16,7 @@ import Header from "./Components/Header";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const [mode, setMode] = useState(true);
+  const [mode, setMode] = useState(false);
 
   return (
     <div className={mode ? "bg-white" : "bg-gray-800 text-white"}>
