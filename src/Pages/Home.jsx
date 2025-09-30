@@ -5,14 +5,14 @@ import Destinations from "../Components/Destination";
 import AboutUs from "../Components/AboutUs";
 import Contact from "../Components/Contact";
 import { Footer } from "../Components/Footer";
-const Home = () => {
+const Home = ({ mode }) => {
   return (
     <>
       <Hero />
       <Destinations showAll={false} />
-      <AboutUs />
-      <Contact />
-      <Footer />
+      <AboutUs mode={mode} />
+      <Contact mode={mode} />
+      <Footer mode={mode} />
     </>
   );
 };

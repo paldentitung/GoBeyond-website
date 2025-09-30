@@ -11,11 +11,17 @@ const ratingImages = {
   50: rating50,
 };
 
-const Card = ({ destination }) => {
+const Card = ({ destination, mode }) => {
   const { id, image, name, description, price, rating, category } = destination;
   return (
     <>
-      <div className="h-[500px] rounded-md overflow-hidden shadow-lg shadow-[rgb(230,230,230)] flex flex-col transition-all duration-200 hover:cursor-pointer hover:shadow-[rgb(220,220,220)]">
+      <div
+        className={`h-[500px] rounded-md overflow-hidden shadow-lg  flex flex-col transition-all duration-200 hover:cursor-pointer  ${
+          mode
+            ? "shadow-[rgb(230,230,230)] hover:shadow-[rgb(220,220,220)] "
+            : ""
+        } `}
+      >
         <div className="h-1/2 w-full overflow-hidden flex-shrink-0">
           <img
             src={image}
@@ -28,7 +34,7 @@ const Card = ({ destination }) => {
             <h1 className="font-bold">{name}</h1>
             <FaMapMarkedAlt />
           </div>
-          <p className="text-gray-700 line-clamp-3">{description}</p>
+          <p className=" line-clamp-3">{description}</p>
           <div className="flex justify-between items-center">
             <span>{price}</span>
             <span>

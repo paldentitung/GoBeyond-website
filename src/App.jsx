@@ -16,16 +16,20 @@ import Header from "./Components/Header";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
+  const [mode, setMode] = useState(true);
 
   return (
-    <div>
-      <Header />
+    <div className={mode ? "bg-white" : "bg-gray-800 text-white"}>
+      <Header mode={mode} setMode={setMode} />
       <ScrollToTop /> {/* Add this */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/destinations" element={<DestinationsPage />} />
+        <Route path="/" element={<Home mode={mode} />} />
+        <Route
+          path="/destinations"
+          element={<DestinationsPage mode={mode} />}
+        />
         <Route path="/destination/:id" element={<DestinationDetailPage />} />
-        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/about" element={<AboutUsPage mode={mode} />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/faqs" element={<FAQsPage />} />
         <Route path="/booking-guide" element={<BookingGuidePage />} />

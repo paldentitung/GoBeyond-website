@@ -82,10 +82,10 @@ const DestinationDetail = ({ id }) => {
             </div>
           </div>
 
-          <p className="text-gray-700 text-lg">{detailDesc}</p>
+          <p className=" text-lg">{detailDesc}</p>
 
           <h3 className="text-2xl font-semibold mt-6">Highlights</h3>
-          <ul className="list-disc list-inside text-gray-600 space-y-1">
+          <ul className="list-disc list-inside  space-y-1">
             {highlights.map((point, i) => (
               <li key={i}>{point}</li>
             ))}

@@ -15,13 +15,17 @@ export const Footer = () => {
       <div className="flex flex-col md:flex-row space-y-5 w-full p-[10%] justify-between">
         {/* Left Section */}
         <div className="flex gap-4 flex-col">
-          <Title title="GoBeyond" />
+          <Link to="/" className="flex items-center gap-1">
+            <span className="bg-cyan-500 text-white p-2 rounded-[50%]">GB</span>
+
+            <Title title="GoBeyond" />
+          </Link>
           <div className="flex gap-5">
-            <FaFacebook className="text-2xl text-gray-800 hover:text-blue-600 transition-colors duration-300 hover:scale-110 hover:cursor-pointer" />
-            <FaInstagram className="text-2xl text-gray-800 hover:scale-110 hover:cursor-pointer hover:text-pink-500 transition-colors duration-300" />
-            <FaLinkedin className="text-2xl text-gray-800 hover:scale-110 hover:cursor-pointer hover:text-blue-700 transition-colors duration-300" />
-            <FaXTwitter className="text-2xl text-gray-800 hover:scale-110 hover:cursor-pointer hover:text-black dark:hover:text-black transition-colors duration-300" />
-            <FaWhatsapp className="text-2xl text-gray-800 hover:scale-110 hover:cursor-pointer hover:text-green-600 transition-colors duration-300" />
+            <FaFacebook className="text-2xl  hover:text-blue-600 transition-colors duration-300 hover:scale-110 hover:cursor-pointer" />
+            <FaInstagram className="text-2xl  hover:scale-110 hover:cursor-pointer hover:text-pink-500 transition-colors duration-300" />
+            <FaLinkedin className="text-2xl  hover:scale-110 hover:cursor-pointer hover:text-blue-700 transition-colors duration-300" />
+            <FaXTwitter className="text-2xl  hover:scale-110 hover:cursor-pointer hover:text-black dark:hover:text-black transition-colors duration-300" />
+            <FaWhatsapp className="text-2xl  hover:scale-110 hover:cursor-pointer hover:text-green-600 transition-colors duration-300" />
           </div>
           <div>&copy;2025 Beyond. All rights reserved</div>
         </div>

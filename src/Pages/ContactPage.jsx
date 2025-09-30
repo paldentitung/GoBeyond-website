@@ -8,7 +8,7 @@ const ContactPage = () => {
         {/* ===== Contact Info ===== */}
         <section className="text-center flex flex-col items-center gap-6">
           <h1 className="text-3xl md:text-4xl font-bold">Contact Us</h1>
-          <p className="text-gray-600 max-w-2xl">
+          <p className=" max-w-2xl">
             Have questions, suggestions, or want to plan your next adventure
             with us? Reach out and we'll get back to you as soon as possible!
           </p>

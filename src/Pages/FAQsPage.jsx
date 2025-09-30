@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const FAQsPage = () => {
   const navigator = useNavigate();
   return (
-    <div className="p-10 max-w-5xl mx-auto">
+    <div className="p-10 max-w-5xl mx-auto min-h-screen">
       <button
         onClick={() => navigator(-1)}
         className="mt-6 text-blue-500 underline hover:text-blue-700 mb-4 cursor-pointer"

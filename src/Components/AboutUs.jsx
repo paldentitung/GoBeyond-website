@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import { FaGlobe, FaPlane, FaHeadset } from "react-icons/fa";
-const AboutUs = () => {
+const AboutUs = ({ mode }) => {
   const highlights = [
     {
       icon: <FaGlobe size={30} className="text-blue-500" />,
@@ -34,7 +34,9 @@ const AboutUs = () => {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="shadow-md shadow-[rgb(230,230,230)] p-3 rounded-md gap-1 transition-all duration-300 hover:cursor-pointer hover:scale-110"
+              className={`shadow-md  p-6 rounded-md gap-1 transition-all duration-300 hover:cursor-pointer hover:scale-110 ${
+                mode ? "shadow-[rgb(230,230,230)]" : "shadow-[rgba(0,0,0,0.4)]"
+              } `}
             >
               <div>{item.icon}</div>
               <h2>{item.title}</h2>

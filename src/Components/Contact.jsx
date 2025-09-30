@@ -1,10 +1,14 @@
 import React from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import MainButton from "./MainButton";
-const Contact = () => {
+const Contact = ({ mode }) => {
   return (
     <>
-      <div className="h-auto md:h-[70vh]  flex flex-col md:flex-row px-[8%] lg:px-[10%] py-[5%] bg-gray-50 gap-6">
+      <div
+        className={`h-auto md:h-[70vh]  flex flex-col md:flex-row px-[8%] lg:px-[10%] py-[5%]  gap-6  ${
+          mode ? "bg-gray-50" : "bg-gay-800"
+        }`}
+      >
         <div className="md:w-1/2 flex flex-col gap-3">
           <h1 className="font-bold ">Have Questions? Get in Touch!</h1>
           <p className="w-full md:w-2/2">
@@ -12,7 +16,7 @@ const Contact = () => {
             we’re here to help. Fill out the form or click below to reach our
             team.
           </p>
-          <div className="space-y-2 text-gray-700">
+          <div className="space-y-2">
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-orange-500" />
               <a className="hover:underline">info@gobeyond.com</a>

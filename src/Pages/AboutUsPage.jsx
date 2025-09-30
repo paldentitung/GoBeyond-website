@@ -1,7 +1,7 @@
 import React from "react";
 import aboutus_image from "../assets/aboutus.jpg";
 import { Footer } from "../Components/Footer";
-const AboutUsPage = () => {
+const AboutUsPage = ({ mode }) => {
   return (
     <>
       <div className="min-h-screen flex flex-col gap-32 px-6 md:px-[10%] py-10">
@@ -10,7 +10,7 @@ const AboutUsPage = () => {
           {/* Text */}
           <div className="md:w-1/2 flex flex-col justify-center space-y-5">
             <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
-            <p className="text-gray-700">
+            <p>
               At GoBeyond, we believe travel is more than just visiting new
               places — it’s about creating unforgettable memories. That’s why we
               started this site: to help explorers like you unlock hidden gems,
@@ -32,7 +32,7 @@ const AboutUsPage = () => {
         {/* ===== Our Mission Section ===== */}
         <section className="flex flex-col items-center text-center gap-6">
           <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className=" max-w-2xl">
             At GoBeyond, our mission is to inspire and empower travelers to
             explore the world in meaningful ways. Travel should connect people,
             cultures, and experiences.
@@ -42,7 +42,7 @@ const AboutUsPage = () => {
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl">✨</span>
               <h3 className="text-xl font-semibold mt-2">Inspire Adventure</h3>
-              <p className="text-gray-600 mt-1 max-w-xs">
+              <p className=" mt-1 max-w-xs">
                 Discover unique places around the globe and create unforgettable
                 memories.
               </p>
@@ -51,7 +51,7 @@ const AboutUsPage = () => {
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl">🌍</span>
               <h3 className="text-xl font-semibold mt-2">Build Connections</h3>
-              <p className="text-gray-600 mt-1 max-w-xs">
+              <p className=" mt-1 max-w-xs">
                 Travel connects people. We foster bonds between travelers and
                 local communities.
               </p>
@@ -60,7 +60,7 @@ const AboutUsPage = () => {
             <div className="flex flex-col items-center text-center">
               <span className="text-5xl">🌱</span>
               <h3 className="text-xl font-semibold mt-2">Travel Responsibly</h3>
-              <p className="text-gray-600 mt-1 max-w-xs">
+              <p className=" mt-1 max-w-xs">
                 Promote sustainable tourism that respects nature and cultures.
               </p>
             </div>
@@ -68,9 +68,13 @@ const AboutUsPage = () => {
         </section>
 
         {/* ===== Why Choose Us Section ===== */}
-        <section className="flex flex-col items-center text-center gap-6 bg-gray-50 py-10 rounded-lg">
+        <section
+          className={`flex flex-col items-center text-center gap-6  py-10 rounded-lg ${
+            mode ? "bg-gray-50" : "bg-gray-800"
+          } `}
+        >
           <h2 className="text-3xl md:text-4xl font-bold">Why Choose Us</h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className=" max-w-2xl">
             At GoBeyond, we combine passion for travel with practical expertise
             to give you unforgettable journeys.
           </p>
@@ -99,7 +103,11 @@ const AboutUsPage = () => {
         </section>
 
         {/* ===== Call To Action ===== */}
-        <section className="flex flex-col items-center text-center bg-cyan-600 text-white py-16 rounded-lg gap-4">
+        <section
+          className={`flex flex-col items-center text-center text-white py-16 rounded-lg gap-4 ${
+            mode ? "bg-cyan-600" : " bg-gray-800"
+          } `}
+        >
           <h2 className="text-3xl md:text-4xl font-bold">
             Ready for Your Next Adventure?
           </h2>
