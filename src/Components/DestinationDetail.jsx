@@ -5,10 +5,10 @@ import rating45 from "../assets/rating-45.png";
 import rating50 from "../assets/rating-50.png";
 import { useNavigate } from "react-router-dom";
 
-const DestinationDetail = ({ id }) => {
+const DestinationDetail = ({ id, mode }) => {
   const destination = data.find((item) => item.id === id);
   const [showModal, setShowModal] = useState(false);
-  const navigator = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.overflow = showModal ? "hidden" : "auto";
@@ -41,7 +41,7 @@ const DestinationDetail = ({ id }) => {
       <div className="px-8 py-8 max-w-6xl mx-auto">
         {/* Back button */}
         <button
-          onClick={() => navigator(-1)}
+          onClick={() => navigate(-1)}
           className="mt-6 text-blue-500 underline hover:text-blue-700 mb-4 cursor-pointer"
         >
           ← Back
@@ -82,10 +82,10 @@ const DestinationDetail = ({ id }) => {
             </div>
           </div>
 
-          <p className=" text-lg">{detailDesc}</p>
+          <p className="text-lg">{detailDesc}</p>
 
           <h3 className="text-2xl font-semibold mt-6">Highlights</h3>
-          <ul className="list-disc list-inside  space-y-1">
+          <ul className="list-disc list-inside space-y-1">
             {highlights.map((point, i) => (
               <li key={i}>{point}</li>
             ))}
@@ -103,12 +103,26 @@ const DestinationDetail = ({ id }) => {
         </div>
       </div>
 
+      {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full relative shadow-2xl">
-            <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
+        <div
+          className={`fixed inset-0 flex justify-center items-center z-50 p-4 ${
+            mode ? "bg-black/50" : "bg-gray-500/50"
+          }`}
+        >
+          <div
+            className={`rounded-2xl p-8 max-w-md w-full relative shadow-2xl ${
+              mode ? "bg-gray-800 text-white" : "bg-white text-black"
+            }`}
+          >
+            <h2
+              className={`text-3xl font-bold mb-6 text-center ${
+                mode ? "text-cyan-400" : "text-blue-600"
+              }`}
+            >
               Book Your Trip
             </h2>
+
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -121,19 +135,31 @@ const DestinationDetail = ({ id }) => {
                 type="text"
                 placeholder="Your Name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
               />
               <input
                 type="email"
                 placeholder="Email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
               />
               <input
                 type="number"
@@ -141,7 +167,11 @@ const DestinationDetail = ({ id }) => {
                 defaultValue={1}
                 min={1}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
               />
               <button
                 type="submit"
@@ -154,7 +184,9 @@ const DestinationDetail = ({ id }) => {
             {/* Close button */}
             <div
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-2xl bg-gray-200 w-10 h-10 flex justify-center items-center rounded-full cursor-pointer hover:scale-110 transition-transform duration-200"
+              className={`absolute top-4 right-4 text-2xl w-10 h-10 flex justify-center items-center rounded-full cursor-pointer transition-transform duration-200 hover:scale-110 ${
+                mode ? "bg-gray-600 text-white" : "bg-gray-200 text-black"
+              }`}
             >
               &times;
             </div>
