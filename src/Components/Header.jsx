@@ -9,7 +9,7 @@ const Header = ({ setMode, mode }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header
-      className={` flex justify-around items-center p-6 flex-col md:flex-row top-0 z-50 sticky ${
+      className={`sticky top-0 z-40 flex justify-between items-center p-6 flex-col md:flex-row md:justify-around ${
         mode ? "bg-white text-black" : "bg-gray-800 text-white"
       }`}
     >
@@ -77,8 +77,7 @@ const Header = ({ setMode, mode }) => {
           </li>
         </ul>
       </nav>
-
-      <div className="hidden md:flex items-center gap-5">
+      <div className="hidden md:flex items-center space-x-4">
         <Link to="/destinations">
           <FaSearch className="text-[18px]" />
         </Link>
@@ -101,7 +100,6 @@ const Header = ({ setMode, mode }) => {
           ></span>
         </label>
       </div>
-
       {showMenu && (
         <nav
           className={`md:hidden min-h-screen w-3/4 fixed right-0 top-0 z-50 flex flex-col gap-5 items-center p-[5%] ${
@@ -172,7 +170,10 @@ const Header = ({ setMode, mode }) => {
           </ul>
 
           {/* Toggle inside mobile menu */}
-          <div className="mt-6">
+          <div className="mt-6 flex items-center gap-4">
+            <Link to="/destinations">
+              <FaSearch className="text-[18px]" />
+            </Link>
             <input
               type="checkbox"
               id="mode-toggle-mobile"

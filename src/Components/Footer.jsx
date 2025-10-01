@@ -36,16 +36,16 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3 md:items-center">
             <span className="font-semibold">Destinations</span>
             <ul className="flex flex-col space-y-3 justify-center md:items-center">
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/destinations">Popular Destinations</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/destinations">Adventure Trips</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/destinations">Beach Holidays</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/destinations">Mountain Treks</Link>
               </li>
             </ul>
@@ -55,10 +55,10 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3 md:items-center">
             <span className="font-semibold">Company</span>
             <ul className="flex flex-col space-y-3 justify-center md:items-center">
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/contact">Contact</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/about">About us</Link>
               </li>
             </ul>
@@ -68,13 +68,13 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3 md:items-center">
             <span className="font-semibold">Support</span>
             <ul className="flex flex-col space-y-3 justify-center md:items-center">
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/contact">Contact Us</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/faqs">FAQs</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/booking-guide">Booking Guide</Link>
               </li>
             </ul>
@@ -84,10 +84,10 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3 md:items-center">
             <span className="font-semibold">Legal</span>
             <ul className="flex flex-col space-y-3 justify-center md:items-center">
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/terms">Terms & Conditions</Link>
               </li>
-              <li className="text-gray-500 transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
+              <li className="transition-all duration-300 hover:cursor-pointer border-b border-transparent hover:border-gray-500">
                 <Link to="/privacy">Privacy Policy</Link>
               </li>
             </ul>

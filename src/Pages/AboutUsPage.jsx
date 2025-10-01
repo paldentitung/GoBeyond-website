@@ -1,6 +1,7 @@
 import React from "react";
 import aboutus_image from "../assets/aboutus.jpg";
 import { Footer } from "../Components/Footer";
+import { Link } from "react-router-dom";
 const AboutUsPage = ({ mode }) => {
   return (
     <>
@@ -115,9 +116,12 @@ const AboutUsPage = ({ mode }) => {
             Explore amazing destinations, plan your trip, and create memories
             that last a lifetime.
           </p>
-          <button className="mt-4 bg-white text-cyan-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+          <Link
+            to="/destinations"
+            className="mt-4 bg-white text-cyan-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          >
             Explore Destinations
-          </button>
+          </Link>
         </section>
       </div>
       <Footer />
