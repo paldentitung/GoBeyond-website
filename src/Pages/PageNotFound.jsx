@@ -6,7 +6,7 @@ const PageNotFound = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-col space-y-4 mt-10">
+      <div className="flex justify-center items-center flex-col space-y-4 min-h-screen">
         <img src={pagenotfound404} alt="" className="w-72 h-72" />
         <h1 className="text-red-600  text-2xl md:text-4xl">Page Not Found</h1>
         <p className=" text-gray-600 text-center">

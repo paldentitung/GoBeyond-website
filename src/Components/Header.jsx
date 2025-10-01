@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 const Header = ({ setMode, mode }) => {
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -77,7 +78,10 @@ const Header = ({ setMode, mode }) => {
         </ul>
       </nav>
 
-      <div className="hidden md:block">
+      <div className="hidden md:flex items-center gap-5">
+        <Link to="/destinations">
+          <FaSearch className="text-[18px]" />
+        </Link>
         <input
           type="checkbox"
           id="mode-toggle"
