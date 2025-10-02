@@ -106,12 +106,12 @@ const DestinationDetail = ({ id, mode }) => {
       {/* Modal */}
       {showModal && (
         <div
-          className={`fixed inset-0 flex justify-center items-center z-50 p-4 ${
+          className={`fixed inset-0 flex justify-center items-center z-50 p-4   ${
             mode ? "bg-black/50" : "bg-gray-500/50"
           }`}
         >
           <div
-            className={`rounded-2xl p-8 max-w-md w-full relative shadow-2xl ${
+            className={`rounded-2xl p-4  w-full max-w-[700px]  relative shadow-2xl ${
               mode ? "bg-gray-800 text-white" : "bg-white text-black"
             }`}
           >
@@ -129,8 +129,9 @@ const DestinationDetail = ({ id, mode }) => {
                 alert("Thank you for your booking!");
                 setShowModal(false);
               }}
-              className="flex flex-col gap-4"
+              className="grid grid-cols-1 md:grid-cols-2 gap-4 "
             >
+              {/* Column 1 */}
               <input
                 type="text"
                 placeholder="Your Name"
@@ -141,6 +142,7 @@ const DestinationDetail = ({ id, mode }) => {
                     : "border-gray-300 focus:ring-blue-400 bg-white text-black"
                 }`}
               />
+
               <input
                 type="email"
                 placeholder="Email"
@@ -151,6 +153,7 @@ const DestinationDetail = ({ id, mode }) => {
                     : "border-gray-300 focus:ring-blue-400 bg-white text-black"
                 }`}
               />
+
               <input
                 type="tel"
                 placeholder="Phone Number"
@@ -161,6 +164,7 @@ const DestinationDetail = ({ id, mode }) => {
                     : "border-gray-300 focus:ring-blue-400 bg-white text-black"
                 }`}
               />
+
               <input
                 type="number"
                 placeholder="Number of Travelers"
@@ -173,9 +177,71 @@ const DestinationDetail = ({ id, mode }) => {
                     : "border-gray-300 focus:ring-blue-400 bg-white text-black"
                 }`}
               />
+
+              <input
+                type="date"
+                required
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
+              />
+
+              <input
+                type="number"
+                placeholder="Duration (days)"
+                min={1}
+                required
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
+              />
+
+              <select
+                required
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
+              >
+                <option value="">Select Package</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="luxury">Luxury</option>
+              </select>
+
+              <select
+                required
+                className={`w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
+              >
+                <option value="">Payment Method</option>
+                <option value="card">Credit/Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Cash on Arrival</option>
+              </select>
+
+              {/* Full width row */}
+              <textarea
+                placeholder="Special Requests"
+                rows="3"
+                className={`md:col-span-2 w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 ${
+                  mode
+                    ? "border-gray-600 focus:ring-cyan-400 bg-gray-700 text-white"
+                    : "border-gray-300 focus:ring-blue-400 bg-white text-black"
+                }`}
+              ></textarea>
+
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-sky-500 px-4 py-3 text-white font-semibold rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className="md:col-span-2 w-full bg-gradient-to-r from-blue-500 to-sky-500 px-4 py-3 text-white font-semibold rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
               >
                 Submit Booking
               </button>
