@@ -4,7 +4,6 @@ import data from "../data/destinations";
 import Title from "./Title";
 import MainButton from "./MainButton";
 import { Link } from "react-router-dom";
-
 const Destinations = ({ showAll = false, mode }) => {
   const displayedData = showAll ? data : data.slice(0, 8);
   const [searchTerm, setSearchTerm] = useState("");

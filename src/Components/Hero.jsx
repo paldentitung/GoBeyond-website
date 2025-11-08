@@ -21,7 +21,7 @@ const Hero = () => {
         <div
           className="
     absolute inset-0 bg-sky-900/50 text-white flex justify-center items-center flex-col
-    opacity-100 lg:opacity-0 lg:group-hover:opacity-100
+    opacity-100
     transition-all duration-300
   "
         >
@@ -33,16 +33,9 @@ const Hero = () => {
               Explore breathtaking destinations, create unforgettable memories,
               and travel beyond the ordinary
             </div>
-            <div className=" relative group  overflow-hidden">
-              <Link to="/destinations">
-                <MainButton name="Explore More " />
-
-                <BsCursor
-                  className="text-[20px]  absolute right-2 bottom-3 p-[2px]  
-              
-             transition-all duration-300 
-              group-active:-right-4 group-active:-top-4 "
-                />
+            <div className="relative group">
+              <Link to="/destinations" className="inline-block relative">
+                <MainButton name="Explore More" />
               </Link>
             </div>
           </div>
