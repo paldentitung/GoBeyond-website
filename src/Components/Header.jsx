@@ -7,6 +7,13 @@ import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 const Header = ({ setMode, mode }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const headerLinks = [
+    { name: "Home", path: "/" },
+    { name: "Destinations", path: "/destinations" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact Us", path: "/contact" },
+  ];
+
   return (
     <header
       className={`sticky top-0 z-40 flex justify-between items-center p-6 flex-col md:flex-row md:justify-around ${
@@ -27,54 +34,20 @@ const Header = ({ setMode, mode }) => {
       </div>
       <nav className="hidden md:block">
         <ul className="flex gap-6">
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `block w-full h-full ${
-                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
-                }`
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
-            <NavLink
-              to="/destinations"
-              className={({ isActive }) =>
-                `block w-full h-full ${
-                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
-                }`
-              }
-            >
-              Destinations
-            </NavLink>
-          </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `block w-full h-full ${
-                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
-                }`
-              }
-            >
-              About Us
-            </NavLink>
-          </li>
-          <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `block w-full h-full ${
-                  isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
-                }`
-              }
-            >
-              Contact Us
-            </NavLink>
-          </li>
+          {headerLinks.map((link, index) => (
+            <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `block w-full h-full ${
+                    isActive ? "text-cyan-500 border-b-2 border-b-cyan-500" : ""
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className="hidden md:flex items-center space-x-4">
@@ -107,66 +80,22 @@ const Header = ({ setMode, mode }) => {
           }`}
         >
           <ul className="flex gap-3 flex-col w-full">
-            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
-              <NavLink
-                to="/"
-                onClick={() => setShowMenu(false)}
-                className={({ isActive }) =>
-                  `block w-full h-full ${
-                    isActive
-                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
-                      : "border-b border-transparent"
-                  }`
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
-              <NavLink
-                to="/destinations"
-                onClick={() => setShowMenu(false)}
-                className={({ isActive }) =>
-                  `block w-full h-full ${
-                    isActive
-                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
-                      : "border-b border-transparent"
-                  }`
-                }
-              >
-                Destinations
-              </NavLink>
-            </li>
-            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
-              <NavLink
-                to="/about"
-                onClick={() => setShowMenu(false)}
-                className={({ isActive }) =>
-                  `block w-full h-full ${
-                    isActive
-                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
-                      : "border-b border-transparent"
-                  }`
-                }
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li className=" p-2 transition-all duration-200 hover:text-cyan-500">
-              <NavLink
-                to="/contact"
-                onClick={() => setShowMenu(false)}
-                className={({ isActive }) =>
-                  `block w-full h-full ${
-                    isActive
-                      ? "text-cyan-500 border-b-2 border-b-cyan-500"
-                      : "border-b border-transparent"
-                  }`
-                }
-              >
-                Contact Us
-              </NavLink>
-            </li>
+            {headerLinks.map((link, index) => (
+              <li className="border-b border-transparent p-2 transition-all duration-200 hover:text-cyan-500">
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `block w-full h-full ${
+                      isActive
+                        ? "text-cyan-500 border-b-2 border-b-cyan-500"
+                        : ""
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
 
           {/* Toggle inside mobile menu */}

@@ -4,6 +4,7 @@ import data from "../data/destinations";
 import Title from "./Title";
 import MainButton from "./MainButton";
 import { Link } from "react-router-dom";
+import { easeIn, motion } from "framer-motion";
 const Destinations = ({ showAll = false, mode }) => {
   const displayedData = showAll ? data : data.slice(0, 8);
   const [searchTerm, setSearchTerm] = useState("");
@@ -62,9 +63,14 @@ const Destinations = ({ showAll = false, mode }) => {
         {filterData.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-[10%] py-[5%]">
             {filterData.map((destination, index) => (
-              <div key={index}>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 1 }}
+                transition={{ duration: 0.2, delay: index * 0.2, ease: easeIn }}
+              >
                 <Card destination={destination} mode={mode} />
-              </div>
+              </motion.div>
             ))}
           </div>
         ) : (

@@ -3,6 +3,7 @@ import hero__image from "../assets/hero-image.jpg";
 import MainButton from "./MainButton";
 import { Link } from "react-router-dom";
 import { BsCursor } from "react-icons/bs";
+import { easeInOut, motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
@@ -25,7 +26,12 @@ const Hero = () => {
     transition-all duration-300
   "
         >
-          <div className="flex justify-center items-center flex-col space-y-4">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, ease: easeInOut }}
+            className="flex justify-center items-center flex-col space-y-4"
+          >
             <div className="text-[18px] md:text-3xl lg:text-5xl">
               Discover Your Next Adventure
             </div>
@@ -38,7 +44,7 @@ const Hero = () => {
                 <MainButton name="Explore More" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

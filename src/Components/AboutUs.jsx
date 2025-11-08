@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import { FaGlobe, FaPlane, FaHeadset } from "react-icons/fa";
+import { easeInOut, motion } from "framer-motion";
 const AboutUs = ({ mode }) => {
   const highlights = [
     {
@@ -22,18 +23,33 @@ const AboutUs = ({ mode }) => {
   return (
     <>
       <div className="flex  w-full   h-auto md:h-[80vh] flex-col justify-center items-center space-y-9 p-3">
-        <div className=" w-full flex  justify-center items-center flex-col gap-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.2,
+          }}
+          className=" w-full flex  justify-center items-center flex-col gap-5"
+        >
           <Title title="About us" />
           <p className=" w-full md:w-1/2 text-center ">
             We’re passionate travelers dedicated to helping you explore the
             world with ease and confidence. From iconic landmarks to hidden
             gems, we make your journey unforgettable.
           </p>
-        </div>
+        </motion.div>
         <div className="flex flex-col md:flex-row  w-full justify-center items-center gap-9 ">
           {highlights.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.2,
+
+                delay: index * 0.1,
+                ease: easeInOut,
+              }}
               className={`shadow-md  p-6 rounded-md gap-1 transition-all duration-300 hover:cursor-pointer hover:scale-110 ${
                 mode ? "shadow-[rgb(230,230,230)]" : "shadow-[rgba(0,0,0,0.4)]"
               } `}
@@ -41,7 +57,7 @@ const AboutUs = ({ mode }) => {
               <div>{item.icon}</div>
               <h2>{item.title}</h2>
               <p>{item.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

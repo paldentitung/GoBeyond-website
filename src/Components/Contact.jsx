@@ -1,15 +1,22 @@
 import React from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import MainButton from "./MainButton";
+import { easeIn, motion } from "framer-motion";
 const Contact = ({ mode }) => {
   return (
     <>
       <div
-        className={`h-auto md:h-[70vh]  flex flex-col md:flex-row px-[8%] lg:px-[10%] py-[5%]  gap-6  ${
+        className={`h-auto md:h-[70vh]  flex flex-col md:flex-row px-[8%] lg:px-[10%] py-[5%] overflow-hidden  gap-6  ${
           mode ? "bg-gray-50" : "bg-gay-800"
         }`}
       >
-        <div className="md:w-1/2 flex flex-col gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="md:w-1/2 flex flex-col gap-3"
+        >
           <h1 className="font-bold ">Have Questions? Get in Touch!</h1>
           <p className="w-full md:w-2/2">
             Whether you need travel advice or want to book your next adventure,
@@ -26,8 +33,14 @@ const Contact = ({ mode }) => {
               <a className="hover:underline">+977 9878181818</a>
             </div>
           </div>
-        </div>
-        <div className="md:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, ease: easeIn }}
+          viewport={{ once: true }}
+          className="md:w-1/2"
+        >
           <form className="w-full flex-col space-y-4">
             <div className="flex flex-col gap-1">
               <label htmlFor="fullname">Fullname:</label>
@@ -63,7 +76,7 @@ const Contact = ({ mode }) => {
               <MainButton name="send message" />
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </>
   );
