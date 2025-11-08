@@ -91,11 +91,11 @@ const Header = ({ setMode, mode }) => {
 
         <label
           htmlFor="mode-toggle"
-          className="w-12 h-6 border rounded-2xl flex items-center cursor-pointer px-1"
+          className="w-14 h-7 border rounded-2xl flex items-center cursor-pointer p-1"
         >
           <span
-            className={`w-4 h-4 rounded-full transition-all ${
-              mode ? "translate-x-6 bg-blue-600" : "translate-x-0 bg-gray-400"
+            className={`w-5 h-5 rounded-full transition-all bg-gray-400 ${
+              mode ? "translate-x-0 " : "translate-x-6"
             }`}
           ></span>
         </label>

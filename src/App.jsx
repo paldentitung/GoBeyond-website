@@ -16,9 +16,17 @@ import Header from "./Components/Header";
 import Title from "./Components/Title";
 const App = () => {
   const [showModal, setShowModal] = useState(false);
-  const [mode, setMode] = useState(false);
-  const [showSplash, setShowSplash] = useState(true);
+  const [mode, setMode] = useState(true);
+  const [showSplash, setShowSplash] = useState(false);
   useEffect(() => {
+    const vistedSite = localStorage.getItem("visitedSite");
+
+    if (!vistedSite) {
+      setShowSplash(true);
+
+      localStorage.setItem("visitedSite", "true");
+    }
+
     const splashTimer = setTimeout(() => setShowSplash(false), 2000);
     return () => clearTimeout(splashTimer);
   }, []);
